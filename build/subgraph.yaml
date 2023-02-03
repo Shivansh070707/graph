@@ -1,12 +1,12 @@
 specVersion: 0.0.5
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum
     name: TetherToken
     network: mainnet
     source:
-      address: '0xdAC17F958D2ee523a2206206994597C13D831ec7'
+      address: "0xdAC17F958D2ee523a2206206994597C13D831ec7"
       abi: TetherToken
       startBlock: 16547541
     mapping:
@@ -27,8 +27,8 @@ dataSources:
         - Unpause
       abis:
         - name: TetherToken
-          file: ./abis/TetherToken.json
+          file: TetherToken\abis\TetherToken.json
       eventHandlers:
         - event: Transfer(indexed address,indexed address,uint256)
           handler: handleTransfer
-      file: ./src/tether-token.ts
+      file: TetherToken\TetherToken.wasm
